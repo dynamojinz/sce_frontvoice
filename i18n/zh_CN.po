@@ -1,0 +1,262 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sce_frontvoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-18 01:38+0000\n"
+"PO-Revision-Date: 2019-04-18 09:48+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.8\n"
+"Last-Translator: \n"
+"Language: zh\n"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_answer
+msgid "Answer"
+msgstr "回复"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_code
+msgid "Code"
+msgstr "代码"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_create_uid
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_create_uid
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_create_date
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_create_date
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_display_name
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_display_name
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_display_name
+msgid "Display Name"
+msgstr "名称"
+
+#. module: sce_frontvoice
+#: selection:sce_frontvoice.statistics,state:0
+#: selection:sce_frontvoice.voice,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: sce_frontvoice
+#: model:ir.ui.menu,name:sce_frontvoice.menu_root
+msgid "Front Voice"
+msgstr "基层炮声"
+
+#. module: sce_frontvoice
+#: model:res.groups,name:sce_frontvoice.frontvoice_admin
+msgid "Front Voice / Administrator"
+msgstr "基层炮声 / 管理员"
+
+#. module: sce_frontvoice
+#: model:ir.ui.view,arch_db:sce_frontvoice.res_config_settings_view_form
+msgid "FrontVoice"
+msgstr "基层炮声"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_id
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_id
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_id
+msgid "ID"
+msgstr ""
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_image
+msgid "Image"
+msgstr "图片"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_res_config_settings_sce_frontvoice_introduction
+msgid "Introduction of front voice"
+msgstr "基层炮声简介"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics___last_update
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice___last_update
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type___last_update
+msgid "Last Modified on"
+msgstr "修改时间"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_write_uid
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_write_uid
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_write_uid
+msgid "Last Updated by"
+msgstr "更新人"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_write_date
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_write_date
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_write_date
+msgid "Last Updated on"
+msgstr "更新时间"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_name
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_name
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_name
+msgid "Name"
+msgstr "名称"
+
+#. module: sce_frontvoice
+#: selection:sce_frontvoice.statistics,state:0
+#: selection:sce_frontvoice.voice,state:0
+msgid "Published"
+msgstr "发布"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_question
+msgid "Question"
+msgstr "提案"
+
+#. module: sce_frontvoice
+#: model:ir.ui.view,arch_db:sce_frontvoice.res_config_settings_view_form
+msgid "Set introduction"
+msgstr "简介设置"
+
+#. module: sce_frontvoice
+#: model:ir.ui.view,arch_db:sce_frontvoice.res_config_settings_view_form
+msgid "Set introduction for front voice home page."
+msgstr "设置基层炮声首页简介"
+
+#. module: sce_frontvoice
+#: model:ir.ui.menu,name:sce_frontvoice.menu_settings
+msgid "Settings"
+msgstr "设置"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_state
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_state
+msgid "State"
+msgstr "状态"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,help:sce_frontvoice.field_sce_frontvoice_statistics_image
+msgid "This field holds the image of the fault."
+msgstr "提案月报图片"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_id_4125
+msgid "Type"
+msgstr "类别"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_statistics_url
+msgid "Url"
+msgstr "链接地址"
+
+#. module: sce_frontvoice
+#: model:ir.model.fields,field_description:sce_frontvoice.field_sce_frontvoice_voice_type_voice_count
+msgid "Voice Count"
+msgstr "提案数量"
+
+#. module: sce_frontvoice
+#: model:ir.ui.menu,name:sce_frontvoice.menu_voice_home
+msgid "Voice Home"
+msgstr "基层炮声首页"
+
+#. module: sce_frontvoice
+#: model:ir.ui.menu,name:sce_frontvoice.menu_voice
+msgid "Voice Management"
+msgstr "提案管理"
+
+#. module: sce_frontvoice
+#: model:ir.actions.act_url,name:sce_frontvoice.action_url_voice_home
+msgid "Voice Search"
+msgstr "搜索提案"
+
+#. module: sce_frontvoice
+#: model:ir.ui.menu,name:sce_frontvoice.menu_statistics
+msgid "Voice Statistics"
+msgstr "提案月报"
+
+#. module: sce_frontvoice
+#: model:ir.ui.menu,name:sce_frontvoice.menu_voice_type
+msgid "Voice Type Management"
+msgstr "类别设置"
+
+#. module: sce_frontvoice
+#: model:ir.actions.act_window,name:sce_frontvoice.action_window_voice
+msgid "Voice.action.window"
+msgstr "提案管理"
+
+#. module: sce_frontvoice
+#: model:ir.actions.act_window,name:sce_frontvoice.action_window_settings
+msgid "Voice.settings.action.window"
+msgstr "设置"
+
+#. module: sce_frontvoice
+#: model:ir.actions.act_window,name:sce_frontvoice.action_window_statistics
+msgid "Voice.statistics.action.window"
+msgstr "提案月报"
+
+#. module: sce_frontvoice
+#: model:ir.actions.act_window,name:sce_frontvoice.action_window_voice_type
+msgid "Voice.type.action.window"
+msgstr "类别设置"
+
+#. module: sce_frontvoice
+#: model:ir.model,name:sce_frontvoice.model_res_config_settings
+msgid "res.config.settings"
+msgstr "设置"
+
+#. module: sce_frontvoice
+#: model:ir.model,name:sce_frontvoice.model_sce_frontvoice_statistics
+msgid "sce_frontvoice.statistics"
+msgstr "提案月报"
+
+#. module: sce_frontvoice
+#: model:ir.model,name:sce_frontvoice.model_sce_frontvoice_voice
+msgid "sce_frontvoice.voice"
+msgstr "提案"
+
+#. module: sce_frontvoice
+#: model:ir.model,name:sce_frontvoice.model_sce_frontvoice_voice_type
+msgid "sce_frontvoice.voice.type"
+msgstr "类别"
+
+#. module: sce_frontvoice
+#: model:ir.ui.view,arch_db:sce_frontvoice.voice_home
+msgid "提案Q&amp;A"
+msgstr ""
+
+#. module: sce_frontvoice
+#: model:ir.ui.view,arch_db:sce_frontvoice.voice_home
+msgid "提案月报"
+msgstr ""
+
+#. module: sce_frontvoice
+#: model:ir.ui.view,arch_db:sce_frontvoice.voices
+msgid "搜索"
+msgstr ""
+
+#. module: sce_frontvoice
+#: model:ir.ui.view,arch_db:sce_frontvoice.voice_home
+msgid "新建提案"
+msgstr ""
+
+#. module: sce_frontvoice
+#: model:ir.ui.view,arch_db:sce_frontvoice.voices
+msgid "查看详情"
+msgstr ""
+
+#. module: sce_frontvoice
+#: model:ir.ui.view,arch_db:sce_frontvoice.statistics_view
+msgid "链接地址："
+msgstr ""

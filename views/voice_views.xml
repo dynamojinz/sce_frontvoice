@@ -1,0 +1,118 @@
+<odoo>
+  <data>
+     <!--explicit list view definition -->
+    <record model="ir.ui.view" id="sce_frontvoice.voice_type_list">
+      <field name="name">Voice.Type.List</field>
+      <field name="model">sce_frontvoice.voice.type</field>
+      <field name="arch" type="xml">
+        <tree default_order="name">
+          <field name="name"/>
+          <field name="code"/>
+          <field name="voice_count"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="sce_frontvoice.voice_list">
+      <field name="name">Voice.List</field>
+      <field name="model">sce_frontvoice.voice</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="question"/>
+          <field name="type_id"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="sce_frontvoice.voice_type_form">
+      <field name="name">Voice.Type.Form</field>
+      <field name="model">sce_frontvoice.voice.type</field>
+      <field name="arch" type="xml">
+          <form>
+              <sheet>
+                  <group>
+                      <group>
+                          <field name="name"/>
+                      </group>
+                      <group>
+                          <field name="code"/>
+                      </group>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="sce_frontvoice.voice_form">
+      <field name="name">Voice.Form</field>
+      <field name="model">sce_frontvoice.voice</field>
+      <field name="arch" type="xml">
+          <form>
+              <header>
+                  <field name="state" widget="statusbar" clickable="1"/>
+              </header>
+              <sheet>
+                  <group>
+                      <field name="type_id"/>
+                  </group>
+                  <group>
+                      <field name="question"/>
+                  </group>
+                  <group>
+                      <field name="answer"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="sce_frontvoice.statistics_form">
+      <field name="name">Statistics.Form</field>
+      <field name="model">sce_frontvoice.statistics</field>
+      <field name="arch" type="xml">
+          <form>
+              <header>
+                  <field name="state" widget="statusbar" clickable="1"/>
+              </header>
+              <sheet>
+                  <group>
+                      <field name="name"/>
+                  </group>
+                  <group>
+                      <field name="image" widget="image" class="oe_avatar" options='{"preview_image":"image"}'/>
+                  </group>
+                  <group>
+                      <field name="url"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="sce_frontvoice.action_window_voice">
+      <field name="name">Voice.action.window</field>
+      <field name="res_model">sce_frontvoice.voice</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="sce_frontvoice.action_window_voice_type">
+      <field name="name">Voice.type.action.window</field>
+      <field name="res_model">sce_frontvoice.voice.type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="sce_frontvoice.action_window_statistics">
+      <field name="name">Voice.statistics.action.window</field>
+      <field name="res_model">sce_frontvoice.statistics</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_url" id="sce_frontvoice.action_url_voice_home">
+      <field name="name">Voice Search</field>
+      <field name="url">/sce_frontvoice/home</field>
+      <field name="target">self</field>
+    </record>
+  </data>
+</odoo>

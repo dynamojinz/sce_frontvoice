@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+    <!-- Top menu item -->
+    <menuitem name="Front Voice" id="sce_frontvoice.menu_root" groups="sce_frontvoice.frontvoice_admin"/>
+    <!-- backend -->
+    <menuitem name="Voice Management" id="sce_frontvoice.menu_voice" parent="sce_frontvoice.menu_root" sequence="80" 
+        action="sce_frontvoice.action_window_voice"/>
+    <menuitem name="Voice Type Management" id="sce_frontvoice.menu_voice_type" parent="sce_frontvoice.menu_root" sequence="81" 
+        action="sce_frontvoice.action_window_voice_type"/>
+    <menuitem name="Voice Statistics" id="sce_frontvoice.menu_statistics" parent="sce_frontvoice.menu_root" sequence="82" 
+        action="sce_frontvoice.action_window_statistics"/>
+    <menuitem name="Settings" id="sce_frontvoice.menu_settings" parent="sce_frontvoice.menu_root" sequence="83" 
+        action="sce_frontvoice.action_window_settings"/>
+    <!-- frontend -->
+    <menuitem name="Voice Home" id="sce_frontvoice.menu_voice_home" parent="sce_frontvoice.menu_root"
+              action="sce_frontvoice.action_url_voice_home" sequence="90"/>
+  </data>
+</odoo>

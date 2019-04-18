@@ -1,0 +1,38 @@
+.intro>p{
+	color: #000;
+	text-align:center;
+	padding:40px 20px;
+	line-height: 24px;
+}
+
+.main>div{
+	width:80%;margin:0px auto 30px;
+	/*background-color: red;*/
+	height: 12em;border-radius: 10px;
+	position: relative;
+	font-size: 10px;
+	box-shadow: 2px 5px 10px #ccc;
+}
+.main div a{display: block;height: 10em}
+.main>div p{
+	font-size:2em;color: #fff;font-weight: bold;
+	line-height: 6em;padding-left:1.5em;
+}
+.main>div b{
+	display: block;position: absolute;right:1.5em;top:2em;
+	width: 80px;height: 80px;/*background: #ddd;*/
+	text-align:center;line-height: 80px;
+}
+.cases{background-color: #77BAFF}
+.cases b{
+	background: url(../img/cases.png) 8px 6px no-repeat;
+}
+.QA{background-color: #7C93FB}
+.QA b{
+	background: url(../img/QA.png) 8px 6px no-repeat;
+}
+.plan{background-color: #43D8D6}
+.plan b{
+	background: url(../img/plan.png) 8px 6px no-repeat;
+}
+.layout{background: #fff;}

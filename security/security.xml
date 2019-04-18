@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record model="res.groups" id="frontvoice_admin">
+            <field name="name">Front Voice / Administrator</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,160 @@
+<odoo>
+    <data>
+    <!-- Voice list view -->
+    <template id="voice_view">
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0"/>
+        <title>详情</title>
+        <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/base.css"/>
+        <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/QA.css"/>
+    </head>
+    <body>
+        <div class="layout">
+            <section class="session session2">
+                <div class="qt">
+                    <b>Q</b>
+                    <div class="text_box">
+                        <p t-field="voice.question"/>
+                    </div>
+                </div>
+                <div class="aw">
+                    <b>A</b>
+                    <div class="text_box">
+                        <p t-field="voice.answer"/>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+    </html>
+    </template>
+
+    <template id="voices" name="Voices">
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0"/>
+        <title>提案Q&amp;A</title>
+        <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/base.css"/>
+        <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/QA.css"/>
+        <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/swiper.min.css"/>
+        <script type="test/javascript" src="/sce_frontvoice/static/src/js/all.js"></script>
+        <script type="test/javascript" src="/sce_frontvoice/static/src/js/jquery-1.11.3.min.js"></script>
+        <script type="test/javascript" src="/sce_frontvoice/static/src/js/swiper.min.js"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <header>
+                <div class="search_box">
+                    <input type="text" name="search_box" placeholder="搜索"/>
+                </div>
+            </header>
+            <nav>
+                <ul class=" clr menu ">
+                <t t-foreach="voice_types" t-as="voicetype">
+                    <li t-if="voicetype.id==type_id" class="active">
+                        <a t-attf-href="/sce_frontvoice/voice?type_id={{voicetype.id}}">
+                            <span t-field="voicetype.name"/>
+                        </a>
+                    </li>
+                    <li t-else="">
+                        <a t-attf-href="/sce_frontvoice/voice?type_id={{voicetype.id}}">
+                            <span t-field="voicetype.name"/>
+                        </a>
+                    </li>
+                </t>
+                </ul>
+            </nav>
+            <section class="session" t-foreach="voices" t-as="voice">
+                <div class="qt">
+                    <b>Q</b>
+                    <div class="text_box">
+                        <p class="ell2">
+                            <span t-field="voice.question"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="aw">
+                    <b>A</b>
+                    <div class="text_box">
+                        <p class="ell2">
+                            <span t-field="voice.answer"/>
+                        </p>
+                        <a t-att-href="'/sce_frontvoice/voice/%d' % (voice.id)">查看详情</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+    </html>
+    </template>
+
+<template id="voice_home" name="Voice Homepage">
+<t t-name="voice_home">
+  <!--<t t-call="website.layout">-->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0"/>
+        <title>基层炮声</title>
+        <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/base.css"/>
+        <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/voice.css"/>
+    </head>
+    <body>
+    <div class="layout">
+    <section class="intro">
+        <p><span t-esc="introduction"/></p>
+    </section>
+    <section class="main">
+        <div class='cases'>
+            <a href="http://oa.sce-re.com/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=165c2d8210aa65143daf2dc46f6bba89">
+                <p>新建提案</p>
+                <b></b>
+            </a>
+        </div>
+        <div class='QA'>
+            <a href="/sce_frontvoice/voice">
+                <p>提案Q&amp;A</p>
+                <b></b>
+            </a>
+        </div>
+        <div class='plan'>
+            <a href="/sce_frontvoice/statistics">
+                <p>提案月报</p>
+                <b></b>
+            </a>
+        </div>
+    </section>
+    </div>
+    </body>
+  <!--</t>-->
+</t>
+</template>
+
+
+<template id="statistics_view" name="Voice statistics">
+  <t t-name="statistics_view">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0"/>
+        <title>提案月报</title>
+        <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/base.css"/>
+        <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/voice.css"/>
+    </head>
+    <body>
+    <div class="layout" t-if="statistics">
+        <div class="oe_voice_image">
+            <span itemprop="image" t-attf-content="{{request.httprequest.url_root}}web/image/voice_statistics/{{statistics.id}}/image" t-field="statistics.image" t-options="{'widget': 'image', 'zoom': 'image','style':'oe_voice_image'}" t-att-alt="statistics.name" t-att-class="oe_voice_image"/>
+            
+        </div>
+        <div>
+            链接地址：<a t-att-href="statistics.url"><span t-field="statistics.url"/></a>
+        </div>
+    </div>
+    </body>
+  </t>
+</template>
+
+  </data>
+</odoo>

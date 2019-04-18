@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+     <!--explicit list view definition -->
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.sce_frontvoice</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="FrontVoice" string="FrontVoice" data-key="sce_frontvoice" groups="sce_frontvoice.frontvoice_admin">
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <label string="Set introduction"/>
+                            <div class="text-muted">
+                                Set introduction for front voice home page.
+                            </div>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <field name="sce_frontvoice_introduction"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="sce_frontvoice.action_window_settings">
+      <field name="name">Voice.settings.action.window</field>
+      <field name="res_model">res.config.settings</field>
+      <field name="view_mode">form</field>
+      <field name="target">inline</field>
+      <field name="context">{'module': 'sce_frontvoice'}</field>
+    </record>
+  </data>
+</odoo>
