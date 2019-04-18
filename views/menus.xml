@@ -10,7 +10,7 @@
     <menuitem name="Voice Statistics" id="sce_frontvoice.menu_statistics" parent="sce_frontvoice.menu_root" sequence="82" 
         action="sce_frontvoice.action_window_statistics"/>
     <menuitem name="Settings" id="sce_frontvoice.menu_settings" parent="sce_frontvoice.menu_root" sequence="83" 
-        action="sce_frontvoice.action_window_settings"/>
+        action="sce_frontvoice.action_window_settings" groups="base.group_system"/>
     <!-- frontend -->
     <menuitem name="Voice Home" id="sce_frontvoice.menu_voice_home" parent="sce_frontvoice.menu_root"
               action="sce_frontvoice.action_url_voice_home" sequence="90"/>
