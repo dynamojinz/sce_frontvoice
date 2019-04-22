@@ -1,5 +1,7 @@
 window.onload=function(){
 	navEffect();
+    //changetype(1);
+    //$(".clr>li:first>a").click();
 }
 function navEffect(){
 	var startX, moveX, distanceX, currentX=0;
@@ -54,4 +56,12 @@ function navEffect(){
 		}else{currentX+=distanceX;};
 	});
 
+}
+
+function changetype(n){
+    //alert($(".clr>li").length);
+    $(".clr>li").removeClass("active");
+    $(".clr>#type"+n).addClass("active");
+    $(".session").hide();
+    $(".voicetype"+n).show();
 }

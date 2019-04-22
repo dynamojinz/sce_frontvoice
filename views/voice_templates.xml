@@ -40,9 +40,9 @@
         <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/base.css"/>
         <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/QA.css"/>
         <link rel="stylesheet" type="text/css" href="/sce_frontvoice/static/src/css/swiper.min.css"/>
-        <script type="test/javascript" src="/sce_frontvoice/static/src/js/all.js"></script>
-        <script type="test/javascript" src="/sce_frontvoice/static/src/js/jquery-1.11.3.min.js"></script>
-        <script type="test/javascript" src="/sce_frontvoice/static/src/js/swiper.min.js"></script>
+        <script type="text/javascript" src="/sce_frontvoice/static/src/js/all.js"></script>
+        <script type="text/javascript" src="/sce_frontvoice/static/src/js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="/sce_frontvoice/static/src/js/swiper.min.js"></script>
     </head>
     <body>
         <div class="layout">
@@ -52,22 +52,18 @@
                 </div>
             </header>
             <nav>
-                <ul class=" clr menu ">
+                <ul class="clr menu">
                 <t t-foreach="voice_types" t-as="voicetype">
-                    <li t-if="voicetype.id==type_id" class="active">
-                        <a t-attf-href="/sce_frontvoice/voice?type_id={{voicetype.id}}">
-                            <span t-field="voicetype.name"/>
-                        </a>
-                    </li>
-                    <li t-else="">
-                        <a t-attf-href="/sce_frontvoice/voice?type_id={{voicetype.id}}">
+                    <li t-attf-id="type{{voicetype.id}}">
+                        <!--<a t-attf-href="/sce_frontvoice/voice?type_id={{voicetype.id}}">-->
+                            <a t-attf-href="javascript:changetype({{voicetype.id}});">
                             <span t-field="voicetype.name"/>
                         </a>
                     </li>
                 </t>
                 </ul>
             </nav>
-            <section class="session" t-foreach="voices" t-as="voice">
+            <section t-foreach="voices" t-as="voice" t-attf-class="session voicetype{{voice.id}}">
                 <div class="qt">
                     <b>Q</b>
                     <div class="text_box">
