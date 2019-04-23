@@ -48,7 +48,9 @@
         <div class="layout">
             <header>
                 <div class="search_box">
-                    <input type="text" name="search_box" placeholder="搜索"/>
+                    <form id="search_form">
+                    <input type="text" name="search_box" placeholder="搜索" id="searchInput" t-att-value="search"/>
+                    </form>
                 </div>
             </header>
             <nav>
@@ -144,8 +146,8 @@
             <span itemprop="image" t-attf-content="{{request.httprequest.url_root}}web/image/voice_statistics/{{statistics.id}}/image" t-field="statistics.image" t-options="{'widget': 'image', 'zoom': 'image','style':'oe_voice_image'}" t-att-alt="statistics.name" t-att-class="oe_voice_image"/>
             
         </div>
-        <div>
-            链接地址：<a t-att-href="statistics.url"><span t-field="statistics.url"/></a>
+        <div class="report_url">
+            链接地址：<a t-att-href="statistics.url"><span t-field="statistics.name"/></a>
         </div>
     </div>
     </body>

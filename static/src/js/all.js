@@ -2,6 +2,12 @@ window.onload=function(){
 	navEffect();
     //changetype(1);
     //$(".clr>li:first>a").click();
+    $('#searchInput').bind('keypress',function(event){
+        if(event.keyCode == "13"){
+            $("#search_form").trigger("submit");
+            return false;
+            }
+        });
 }
 function navEffect(){
 	var startX, moveX, distanceX, currentX=0;

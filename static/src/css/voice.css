@@ -36,3 +36,5 @@
 	background: url(../img/plan.png) 8px 6px no-repeat;
 }
 .layout{background: #fff;}
+img { height: auto; width: auto\9; width:100%; }
+.report_url{ margin: 10px;}

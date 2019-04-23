@@ -61,8 +61,12 @@ class FrontVoiceController(http.Controller):
         else:
             type_id=1
         domain.append(('type_id','=',type_id))
-        # if post.get('voice_class'):
-            # domain.append(('class_id','=',int(post['voice_class'])))
+        search_key = ""
+        if post.get('search_box'):
+            search_key = post['search_box'].strip()
+            domain.append('|')
+            domain.append(('question','ilike',search_key))
+            domain.append(('answer','ilike',search_key))
         # if post.get('voice_tag'):
             # domain.append(('tag_ids', '=', int(post['voice_tag'])))
 
@@ -81,7 +85,7 @@ class FrontVoiceController(http.Controller):
             'voice_types': voice_types,
             # 'voice_classes': VoiceClass.search([]),
             # 'voice_tags': VoiceTag.search([]),
-            # 'search': search,
+            'search': search_key,
             # 'category': category,
             # 'pager': pager,
             'voices': voices,
