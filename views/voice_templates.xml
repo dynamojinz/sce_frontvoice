@@ -143,8 +143,9 @@
     <body>
     <div class="layout" t-if="statistics">
         <div class="oe_voice_image">
-            <span itemprop="image" t-attf-content="{{request.httprequest.url_root}}web/image/voice_statistics/{{statistics.id}}/image" t-field="statistics.image" t-options="{'widget': 'image', 'zoom': 'image','style':'oe_voice_image'}" t-att-alt="statistics.name" t-att-class="oe_voice_image"/>
-            
+            <a t-attf-href="/web/image/sce_frontvoice.statistics/{{statistics.id}}/image" target="_blank">
+            <span class="img img-responsive" itemprop="image"  t-field="statistics.image" t-options="{'widget': 'image', 'zoom': 'image'}" t-att-alt="statistics.name"/>
+            </a>
         </div>
         <div class="report_url">
             链接地址：<a t-att-href="statistics.url"><span t-field="statistics.name"/></a>
