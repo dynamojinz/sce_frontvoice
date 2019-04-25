@@ -8,6 +8,7 @@ window.onload=function(){
             return false;
             }
         });
+    //$(".session").show();
 }
 function navEffect(){
 	var startX, moveX, distanceX, currentX=0;

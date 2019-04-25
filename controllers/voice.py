@@ -54,13 +54,13 @@ class FrontVoiceController(http.Controller):
         # url = "/sce_frontvoice/voice"
         # if search:
             # post["search"] = search
-        if post.get('type_id'):
-            type_id = int(post['type_id'])
-        elif voice_types:
-            type_id = voice_types[0].id
-        else:
-            type_id=1
-        domain.append(('type_id','=',type_id))
+        # if post.get('type_id'):
+            # type_id = int(post['type_id'])
+        # elif voice_types:
+            # type_id = voice_types[0].id
+        # else:
+            # type_id=1
+        # domain.append(('type_id','=',type_id))
         search_key = ""
         if post.get('search_box'):
             search_key = post['search_box'].strip()
@@ -89,7 +89,7 @@ class FrontVoiceController(http.Controller):
             # 'category': category,
             # 'pager': pager,
             'voices': voices,
-            'type_id': type_id,
+            # 'type_id': type_id,
             # 'search_count': voice_count,  # common for all searchbox
             # 'rows': PPG,
             # 'keep': keep,
