@@ -65,7 +65,7 @@
                 </t>
                 </ul>
             </nav>
-            <section t-foreach="voices" t-as="voice" t-attf-class="session voicetype{{voice.id}}">
+            <section t-foreach="voices" t-as="voice" t-attf-class="session voicetype{{voice.type_id.id}}">
                 <div class="qt">
                     <b>Q</b>
                     <div class="text_box">

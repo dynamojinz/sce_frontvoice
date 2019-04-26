@@ -17,13 +17,18 @@
 	width: 90%;border-radius: 2em;
 	/*position: absolute;left: 50%;margin-left: -50%;*/
 }
-nav{background: #fff;position:relative;overflow: hidden;}
+/*nav{background: #fff;position:relative;overflow: hidden;}*/
+nav{background: #fff;position:relative;}
+/*nav>ul{*/
+	/*height: 3em;background:#fff;overflow: hidden;*/
+	/*position: relative;*/
+/*}*/
 nav>ul{
-	height: 3em;background:#fff;overflow: hidden;
+	height: 3em;background:#fff;
 	position: relative;
 }
 nav>ul>li{
-	float: left;width: 8em;text-align: center;height: 3em;line-height: 3em;
+	float: left;width: 5em;text-align: center;height: 3em;line-height: 3em;
 }
 .active,.active a{color:#2892F3;}
 .active::after{
