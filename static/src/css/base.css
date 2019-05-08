@@ -37,7 +37,7 @@ input{
 }
 .layout{
     width: 100%;
-    max-width: 640px;min-width: 320px;
+    max-width: 800px;min-width: 320px;
     margin:0 auto;min-height: 1000px; background-color: #f0f0f0;
 }
 .ell1{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
