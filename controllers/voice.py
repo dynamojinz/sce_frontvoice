@@ -2,6 +2,7 @@
 from odoo import http
 from odoo.http import request
 from odoo.addons.website.controllers.main import QueryURL
+import json
 PPG = 4  # Voice Per Page
 
 
@@ -20,6 +21,15 @@ class FrontVoiceController(http.Controller):
         return http.request.render('sce_frontvoice.voice_view',{
             'voice': voice,
             })
+
+    @http.route([
+        '/sce_frontvoice/voice/count',
+    ], type='http', auth="public", website=True, csrf=False)
+    def voice_count(self, **post):
+        domain=[('state','=','published'),]
+        Voice = request.env['sce_frontvoice.voice']
+        count = Voice.search_count(domain)
+        return json.dumps({'count': count})
 
     @http.route([
         '/sce_frontvoice/voice',
