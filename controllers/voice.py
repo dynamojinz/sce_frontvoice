@@ -29,7 +29,8 @@ class FrontVoiceController(http.Controller):
         domain=[('state','=','published'),]
         Voice = request.env['sce_frontvoice.voice']
         count = Voice.search_count(domain)
-        return json.dumps({'count': count})
+        print(type(count))
+        return json.dumps({'count': 255})
 
     @http.route([
         '/sce_frontvoice/voice',
