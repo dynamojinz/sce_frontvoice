@@ -25,6 +25,30 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="sce_frontvoice.intros_list">
+        <field name="name">Intros.List</field>
+        <field name="model">sce_frontvoice.intros</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="intros"/>
+                <field name="items"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="sce_frontvoice.intros_form">
+        <field name="name">Intros.Form</field>
+        <field name="model">sce_frontvoice.intros</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="intros"/>
+                    <field name="items"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
     <record model="ir.ui.view" id="sce_frontvoice.voice_type_form">
       <field name="name">Voice.Type.Form</field>
       <field name="model">sce_frontvoice.voice.type</field>
@@ -112,7 +136,13 @@
     <record model="ir.actions.act_url" id="sce_frontvoice.action_url_voice_home">
       <field name="name">Voice Search</field>
       <field name="url">/sce_frontvoice/home</field>
-      <field name="target">self</field>
+      <field name="target">new</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="sce_frontvoice.action_window_intros">
+      <field name="name">Voice.intros.action.window</field>
+      <field name="res_model">sce_frontvoice.intros</field>
+      <field name="view_mode">tree,form</field>
     </record>
   </data>
 </odoo>
