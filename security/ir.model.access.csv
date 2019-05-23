@@ -2,6 +2,8 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 acc_sce_frontvoice_voice,acc_sce_frontvoice.voice,model_sce_frontvoice_voice,,1,0,0,0
 acc_sce_frontvoice_voice_type,acc_sce_frontvoice.voice_type,model_sce_frontvoice_voice_type,,1,0,0,0
 acc_sce_frontvoice_statistics,acc_sce_frontvoice.statistics,model_sce_frontvoice_statistics,,1,0,0,0
+acc_sce_frontvoice_intros,acc_sce_frontvoice.intros,model_sce_frontvoice_intros,,1,0,0,0
 adm_sce_frontvoice_voice,adm_sce_frontvoice.voice,model_sce_frontvoice_voice,frontvoice_admin,1,1,1,1
 adm_sce_frontvoice_voice_type,adm_sce_frontvoice.voice_type,model_sce_frontvoice_voice_type,frontvoice_admin,1,1,1,1
 adm_sce_frontvoice_statistics,adm_sce_frontvoice.statistics,model_sce_frontvoice_statistics,frontvoice_admin,1,1,1,1
+adm_sce_frontvoice_intros,adm_sce_frontvoice.intros,model_sce_frontvoice_intros,frontvoice_admin,1,1,1,1
