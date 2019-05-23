@@ -10,9 +10,15 @@ PPG = 4  # Voice Per Page
 class FrontVoiceController(http.Controller):
     @http.route('/sce_frontvoice/home/', auth='public', website=True)
     def voice_home(self, **kw):
+        # ==================== 分割线 190523 开放后台更改简介及条数入口 =========================
+        intros = request.env['sce_frontvoice.intros']
+        intros = intros.search([], limit=1, order='create_date desc')
+        # ==================== 分割线 =========================
         get_param = request.env['ir.config_parameter'].sudo().get_param
+        # ==================== 分割线 0523 end=========================
         values = {
             'introduction': get_param('sce_frontvoice.introduction'),
+            'intros':intros.intros,  # 0523
         }
         return http.request.render('sce_frontvoice.voice_home',values)
 
@@ -28,9 +34,13 @@ class FrontVoiceController(http.Controller):
     def voice_count(self, **post):
         domain=[('state','=','published'),]
         Voice = request.env['sce_frontvoice.voice']
-        count = Voice.search_count(domain)
-        print(type(count))
-        return json.dumps({'count': 255})
+        # count = Voice.search_count(domain)
+        # ==================== 分割线 190523 新增后台更改简介及条数入口 =========================
+        intros = request.env['sce_frontvoice.intros']
+        intros = intros.search([], limit=1, order='create_date desc')
+        count = intros.items
+        # ==================== 分割线 =========================
+        return json.dumps({'count': count})
 
     @http.route([
         '/sce_frontvoice/voice',

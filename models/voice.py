@@ -51,24 +51,8 @@ class Statistics(models.Model):
         ('draft','Draft'),
         ('published','Published'),
         ], default='published')
-    # def action_publish(self):
-        # # message = _("A new voice was published:\nSN:%s\nType:%s\nTitle:%s") % (self.name, self.type_id.name, self.title)
-        # title = _("A new voice was published")
-        # markdown = _("## %s\n- SN:%s\n- Type:%s\n- Title:%s") % (title, self.name, self.type_id.name, self.title)
-        # # url = "http://cs.sce-re.com:8049/sce_frontvoice/voice/%d" % (self.id)
-        # redirect = "/sce_frontvoice/voice/%d" % (self.id)
-        # # url = "http://localhost:8069/sce_dingtalk/oauth/script/%s?redirect=%s" % (self._name, urllib.parse.quote(redirect),)
-        # users = self.env.ref('sce_frontvoice.designlib_user').users
-        # user_list = [user for user,domain in [user.login.split('@') for user in users] if domain=='sce-re.com']
-        # for i in range(int(len(user_list)/20)+1):
-            # send_list = user_list[i*20:i*20+20]
-            # if len(send_list)>0:
-                # # print(",".join(send_list))
-                # self.dingtalk_send_action_card_message(",".join(send_list), title, markdown, redirect)
-        # # Test
-        # # self.dingtalk_send_action_card_message('jinz, liuzaih', title, markdown, redirect)
-        # self.state = 'published'
 
-    # def action_cancel_publish(self):
-        # self.state = 'draft'
-
+class Intros(models.Model):
+    _name = "sce_frontvoice.intros"
+    intros = fields.Text(required=True)
+    items = fields.Integer(required=True)

@@ -19,21 +19,21 @@
 	line-height: 6em;padding-left:1.5em;
 }
 .main>div b{
-	display: block;position: absolute;right:1.5em;top:2em;
-	width: 80px;height: 80px;/*background: #ddd;*/
-	text-align:center;line-height: 80px;
+	display: block;position: absolute;right:2.5em;top:2.5em;
+	width: 70px;height: 70px;/*background: #ddd;*/
+	text-align:center;line-height: 70px;background-size: contain;
 }
 .cases{background-color: #77BAFF}
 .cases b{
-	background: url(../img/cases.png) 8px 6px no-repeat;
+	background: url(../img/cases0.png) 0 0 no-repeat;
 }
 .QA{background-color: #7C93FB}
 .QA b{
-	background: url(../img/QA.png) 8px 6px no-repeat;
+	background: url(../img/QA0.png) 0 0 no-repeat;
 }
 .plan{background-color: #43D8D6}
 .plan b{
-	background: url(../img/plan.png) 8px 6px no-repeat;
+	background: url(../img/plan0.png) 0 0 no-repeat;
 }
 .layout{background: #fff;}
 img { height: auto; width: auto\9; width:100%; }

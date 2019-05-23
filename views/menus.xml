@@ -11,8 +11,12 @@
         action="sce_frontvoice.action_window_statistics"/>
     <menuitem name="Settings" id="sce_frontvoice.menu_settings" parent="sce_frontvoice.menu_root" sequence="83" 
         action="sce_frontvoice.action_window_settings" groups="base.group_system"/>
+    <menuitem name="Voice Intros" id="sce_frontvoice.menu_intros" parent="sce_frontvoice.menu_root" sequence="85"
+        action="sce_frontvoice.action_window_intros"/>
     <!-- frontend -->
     <menuitem name="Voice Home" id="sce_frontvoice.menu_voice_home" parent="sce_frontvoice.menu_root"
               action="sce_frontvoice.action_url_voice_home" sequence="90"/>
+
+
   </data>
 </odoo>
